@@ -7,6 +7,12 @@ fi
 
 TIME=$1
 
+if ! [[ "$TIME" =~ ^[0-9]{2}:[0-9]{2}\ [0-9]{4}\-[0-9]{2}\-[0-9]{2}$ ]]; then
+echo "Error: Invalid date and time format. Use 'HH:MM YYYY-MM-DD.'"
+exit 1
+fi
+
+
 if ! command -v at &> /dev/null; then
     echo "Error: command 'at' not installed. Install Package 'at'."
     exit 1
