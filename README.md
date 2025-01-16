@@ -6,4 +6,5 @@ You can schedule the reboot date and time, year.
 `cd schedule-reboot`
 
 `chmod +x ./schedule`
+
 `./schedule 'HH:MM YYYY-MM-DD'`
