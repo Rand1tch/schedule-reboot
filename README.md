@@ -1,5 +1,5 @@
 # schedule-reboot
-You can schedule the reboot date and time, year.
+This Bash script is designed to schedule a server restart at a specified date and time.
 ## Using 
 `$ git clone https://github.com/Rand1tch/schedule-reboot`
 
