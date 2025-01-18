@@ -12,11 +12,23 @@ echo "Error: Invalid date and time format. Use 'HH:MM YYYY-MM-DD.'"
 exit 1
 fi
 
-
 if ! command -v at &> /dev/null; then
-    echo "Error: command 'at' not installed. Install Package 'at'."
+    echo "Command 'at' not found. Trying to install the package..."
+if command -v apt-get &> /dev/null; then
+    sudo apt-get update
+    sudo apt-get install -y at
+elif command -v yum &> /dev/null; then
+    sudo yum install -y at
+elif command -v dnf &> /dev/null; then
+    sudo dnf install -y at
+elif command -v pacman &> /dev/null; then
+    sudo pacman -Sy at -y
+else
+    echo "Error: Unable to install 'at' package. Please install it manually."
     exit 1
 fi
+
+echo "Package 'at' installed successfully."
 
 
 read -p "You want to set this date and time? (yes/no): " CONFIRMATION
