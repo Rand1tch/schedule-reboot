@@ -30,6 +30,7 @@ fi
 
 echo "Package 'at' installed successfully."
 
+fi
 
 read -p "You want to set this date and time? (yes/no): " CONFIRMATION
 
