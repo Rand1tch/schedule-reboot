@@ -5,6 +5,6 @@ This Bash script is designed to schedule a server restart at a specified date an
 
 `cd schedule-reboot`
 
-`chmod +x ./schedule`
+`chmod +x ./schedule.sh`
 
 `./schedule 'HH:MM YYYY-MM-DD'`
